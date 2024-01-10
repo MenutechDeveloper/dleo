@@ -246,6 +246,18 @@ body {
      
     }
   }
+
+ .contact-info {
+    background-color: #333;
+    color: #fff;
+    text-align: right;
+    padding: 10px 20px;
+  }
+  
+  .contact-info a {
+    color: #fff;
+    text-decoration: none;
+  }
   
   
   
