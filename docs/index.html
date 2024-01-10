@@ -11,14 +11,30 @@
     <div class="logo-container">
       <img src="./assets/img/DLEO.png">
     </div>
-    <ul>
-      <li><a href="#inicio">Inicio</a></li>
-      <li><a href="#sobre-nosotros">Nosotros</a></li>
-      <li><a href="#menu">Menú</a></li>
-      <li><a href="#galeria">Galería</a></li>
-      <li><a href="#contacto">Contacto</a></li>
-    </ul>
+    <div class="mobile-menu">
+      <div class="hamburger-menu" onclick="toggleMenu()">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#sobre-nosotros">Sobre Nosotros</a></li>
+        <li><a href="#menu">Menú</a></li>
+        <li><a href="#galeria">Galería</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </div>
   </nav>
+
+  <!-- Resto del código... -->
+
+  <script>
+    function toggleMenu() {
+      const navLinks = document.querySelector('.nav-links');
+      navLinks.classList.toggle('active');
+    }
+  </script>
 
   <header class="hero" id="inicio">
     <div class="overlay">
