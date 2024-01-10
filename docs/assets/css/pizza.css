@@ -22,7 +22,7 @@ body {
 }
 
 .logo-container img {
-  height: 40px; /* Ajustar altura del logo según sea necesario */
+  height: 100px; /* Ajustar altura del logo según sea necesario */
 }
 
 .mobile-menu {
