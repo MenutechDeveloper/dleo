@@ -6,24 +6,85 @@ body {
     scroll-behavior: smooth; /* Agregar desplazamiento suave */
   }
   
-  nav {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 15px 20px; /* Aumentar la altura del nav */
-    position: fixed;
-    top: 0;
+ nav {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 15px 20px; /* Aumentar la altura del nav */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0; /* Asegura que el nav se extienda completamente a lo ancho de la pantalla */
+  z-index: 1000; /* Asegurar que el nav esté encima de otros elementos */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-container img {
+  height: 40px; /* Ajustar altura del logo según sea necesario */
+}
+
+.mobile-menu {
+  display: flex;
+  align-items: center;
+}
+
+.hamburger-menu {
+  cursor: pointer;
+  display: none; /* Ocultar por defecto en pantallas más grandes */
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 6px 0;
+}
+
+.nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.nav-links li {
+  margin-right: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  .hamburger-menu {
+    display: block; /* Mostrar en pantallas más pequeñas */
+  }
+
+  .nav-links {
+    flex-direction: column;
+    position: absolute;
+    top: 65px;
     left: 0;
-    right: 0; /* Asegura que el nav se extienda completamente a lo ancho de la pantalla */
-    z-index: 1000; /* Asegurar que el nav esté encima de otros elementos */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    width: 100%;
+    background-color: #333;
+    text-align: center;
+    display: none; /* Ocultar por defecto en pantallas más pequeñas */
   }
-  
-  .logo-container img {
-    height: 100px; /* Ajustar altura del logo según sea necesario */
+
+  .nav-links.active {
+    display: flex; /* Mostrar cuando el menú está activo */
   }
+
+  .nav-links li {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}
   
   nav ul {
     list-style: none;
